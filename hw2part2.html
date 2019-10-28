@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Working with Grids</title>
+   <meta charset="utf-8">
+   <meta name="description" content="working with grids in CNIT 132A">
+   <style>
+      .page-layout {
+        display: grid; 
+        grid-template-columns: auto 25vw 25vw auto;
+        grid-template-areas: 
+            "name name name name"
+            "aside_1 main main_2 aside_2"
+            "footer footer footer footer";
+        padding: 20px 10px;
+      }
+	  .name, .aside_1, .aside_2, .footer {
+	     text-align: center;
+		 font-weight: bold;
+         padding: 10px;
+	  }
+	  .name {
+	     background-color: orangered;
+         grid-area: name;
+	  }
+      .aside_1 {
+	     background-color: yellow;
+         grid-area: aside_1;
+	  }
+       .aside_2 {
+           background-color: pink;
+           grid-area: aside_2;
+       }
+       .main {
+           background-color: darkblue;
+           color: white;
+           font-weight: bold;
+           grid-area: main;
+           padding: 20px 10px;
+       }
+       .main_2 {
+           background-color: violet;
+           color: blue;
+           font-weight: bold;
+           grid-area: main_2;
+           padding: 20px 10px;
+       }
+       .footer {
+           background-color: lightgreen;
+           grid-area: footer;
+       }
+	 
+   </style>
+</head>
+<body>
+<div class="page-layout">
+  <div class="name">Name of Company</div>
+  <div class="aside_1">This is the aside 1</div>
+  <div class="aside_2">This is the aside 2</div>
+  <div class="main">This is the main article of my page! This is the main content of my page. In a 3-column layout, it should be shown in the middle between the aside 1 and aside 2!</div>
+  <div class="main_2">This column was created to have some content as a challenge to adapt the old 3-column layout to a 4 column layout</div>
+  <div class="footer">This is the footer<br>Copyright &copy; 2019</div>
+  
+</div>
+</body>
+</html>
