@@ -1,0 +1,15 @@
+The way you wrote the CSS selector to have the image showing up AFTER the link is not correct - it should be something as: 
+
+a [href$=".html"]::after, a[href$=".htm"]::after 
+
+{ content=url('browser.png'); } 
+
+
+which you are saying to put AFTER the anchor tag that has the href finishing with .html or the anchor tag that the href finishes with .html the browser.png as content for the ::after pseudo-element. The other images would follow as well...you would just need to be careful to not include the buttons in that which I would put the buttons in a different div (even a footer or a nav element) and would put the content inside the <main> and then would make those selectors be preceded by the word of the element or the class of the element - for example, if you had put your buttons inside a <nav>, that would be outside the div with class="content", then, the selectors shown above would be 
+
+.content a[href$=".html"]::after, 
+
+.content a[href$=".htm"]::after {       
+         content=url('browser.png'); } 
+
+which would indicate every anchor tag, ending in .html or .htm and inside an element with class="content" should have the browser.png placed AFTER the anchor tag (-1)
