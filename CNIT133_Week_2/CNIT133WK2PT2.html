@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta name="description" content="Cindy Cruz, week 2 part 2 homework">
+<title>Cindy Cruz | Week 2 | Part 2</title>
+<style>
+input {text-align: right;}
+body {background-color: #C5CCD9;}
+.body { width: 550px; margin: 0px auto;}
+</style>
+<script>
+    
+/* Fades text boxes, resorted to a div id because I wasn't using a button attribute, tried/failed using "input" instead of "button" but it feels incorrect since "submit" and "reset" are now on two lines */
+$(document).ready(function(){
+  $(button).click(function(){
+    $("#div1").fadeTo("slow", 0.15);
+  });
+});    
+
+/* Left off on writing calculations. Apologies for the incomplete work, this is taking me longer to grasp that I would like */
+function process()
+{
+var number1, number2, number3, n1, n2, n3, sum;
+
+number1 = document.forms["myform"].elements["num1"].value;
+number2 = document.forms["myform"].elements["num2"].value;
+number3 = document.forms["myform"].elements["num3"].value;
+
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+sum = n1 + n2 + n3;
+avg = sum / "3";
+int =
+smlrg = 
+
+
+document.forms["myform"].elements["result"].value = ("The sum of the integers was " + sum +"\nThe average of the integers are " + avg +"\nThe product of the integers are " + sum +"\nThe smallest to largets integers are " + sum); }
+
+    
+</script>
+</head>
+    
+    
+<body>
+<section class="body">  
+<form name="myform">
+<div id="div1">
+<table>
+<tr>
+<td>First Number:</td>
+<td><input type="text" name="num1" size="10"></td>
+</tr>
+    
+<tr>
+<td>Second Number:</td>
+<td><input type="text" name="num2" size="10"></td>
+</tr>
+    
+<tr>
+<td>Third Number:</td>
+<td><input type="text" name="num3" size="10"></td>
+</tr>
+</table>
+    
+<br> Results:
+<textarea rows="4" cols="40" name="result" id="result" readonly value="">
+</textarea>
+<br><br>
+</div>
+    
+<input type="button" onclick="process()" value="SUBMIT">
+<div id="button"><input type="reset" value="RESET"></div>
+</form>
+</section>
+</body>
